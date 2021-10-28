@@ -10,27 +10,27 @@ export default function Sidebar() {
     return (
         <>
             <aside className="sidebar">
-                <h1>KhaBa</h1>
+                <Link to="/input-data/">
+                    <h1>KhaBa</h1>
+                </Link>
                 <nav className="navbar">
                     <ul>
-                            {privileges === "user" ? (
-                                <>
-                                    <li>
-                                        <Link to="/input-data/">
-                                            Data Entry
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/forecast/">
-                                            Today's Forecast
-                                        </Link>
-                                    </li>
-                                </>
-                            ) : (
+                        {privileges === "user" ? (
+                            <>
                                 <li>
-                                    <Link to="/admin/"> Admin's Panel</Link>
+                                    <Link to="/input-data/">Data Entry</Link>
                                 </li>
-                            )}
+                                <li>
+                                    <Link to="/forecast/">
+                                        Today's Forecast
+                                    </Link>
+                                </li>
+                            </>
+                        ) : (
+                            <li>
+                                <Link to="/admin/"> Admin's Panel</Link>
+                            </li>
+                        )}
                     </ul>
                 </nav>
             </aside>
