@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import logo from "./logo.svg";
 import "./App.css";
 
 import Sidebar from "./components/Shared/Sidebar";
 import DataEntry from "./components/DataEntry/DataEntry";
+import TodaysForecast from "./components/TodaysForecast/TodaysForecast";
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
             <Router>
                 <Sidebar />
                 <Switch>
-                    <Route path="/forecast/">{<div>hello</div>}</Route>
+                    <Route path="/forecast/">{<TodaysForecast />}</Route>
                     <Route path="/input-data/">{<DataEntry />}</Route>
                     <Route path="/admin/">{<div>lgkhjgbkhj</div>}</Route>
                     <Route path="/">{<div>lgkhjgbkhj</div>}</Route>

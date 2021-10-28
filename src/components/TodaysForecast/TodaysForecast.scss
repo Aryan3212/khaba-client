@@ -1,0 +1,23 @@
+.todays-forecast {
+    margin-left: 200px;
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    .forecast-item {
+        div {
+            display: grid;
+            margin-top: 4em;
+            grid-template-columns: 1fr 1fr;
+            gap: 5em;
+            h3 {
+                font-size: 3rem;
+                text-transform: capitalize;
+                &:nth-of-type(2) {
+                    color: purple;
+                }
+            }
+        }
+    }
+}
