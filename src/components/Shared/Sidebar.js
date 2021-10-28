@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import "./Sidebar.scss";
 
 export default function Sidebar() {
@@ -11,14 +13,24 @@ export default function Sidebar() {
                 <h1>KhaBa</h1>
                 <nav className="navbar">
                     <ul>
-                        {privileges === "user" ? (
-                            <>
-                                <li>Data Entry</li>
-                                <li>Today's Forecast</li>
-                            </>
-                        ) : (
-                            <li>Admin's Panel</li>
-                        )}
+                            {privileges === "user" ? (
+                                <>
+                                    <li>
+                                        <Link to="/input-data/">
+                                            Data Entry
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/forecast/">
+                                            Today's Forecast
+                                        </Link>
+                                    </li>
+                                </>
+                            ) : (
+                                <li>
+                                    <Link to="/admin/"> Admin's Panel</Link>
+                                </li>
+                            )}
                     </ul>
                 </nav>
             </aside>

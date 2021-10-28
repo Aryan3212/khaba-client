@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import DataInput from "./DataInput/DataInput";
 
 export default function DataEntry() {
-  return (
-    <div>
-      
-    </div>
-  )
+    return (
+        <div>
+            <DataInput />
+        </div>
+    );
 }
