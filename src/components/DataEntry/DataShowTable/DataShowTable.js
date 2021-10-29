@@ -132,12 +132,6 @@ export default function DataShowTable() {
                     <DataShowItem itemList={rice} name='Rice' />
                 </div>
             </div>
-
-
-
-
-
-
         </div>
     );
 }
