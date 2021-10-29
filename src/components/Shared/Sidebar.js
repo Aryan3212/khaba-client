@@ -3,15 +3,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Sidebar.scss";
-
+import khaba_logo from "./Khaba.png";
 export default function Sidebar() {
     const [privileges, setPrivileges] = useState("user");
-
+    const handleButtonClick = () => {
+        if (privileges === "user") {
+            setPrivileges("admin");
+        } else {
+            setPrivileges("user");
+        }
+    };
     return (
         <>
             <aside className="sidebar">
-                <Link to="/input-data/">
-                    <h1>KhaBa</h1>
+                <Link to="/forecast/">
+                    <img src={khaba_logo} alt="Khaba logo" />
                 </Link>
                 <nav className="navbar">
                     <ul>
@@ -33,6 +39,23 @@ export default function Sidebar() {
                         )}
                     </ul>
                 </nav>
+                {privileges === "user" ? (
+                    <Link
+                        onClick={handleButtonClick}
+                        to="/admin/"
+                        className="auth-button"
+                    >
+                        Log in as Admin
+                    </Link>
+                ) : (
+                    <Link
+                        onClick={handleButtonClick}
+                        to="/forecast/"
+                        className="auth-button"
+                    >
+                        Log out
+                    </Link>
+                )}
             </aside>
         </>
     );

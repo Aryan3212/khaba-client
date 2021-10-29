@@ -5,6 +5,10 @@ import "./DataInput.scss";
 import DataItem from "./DataItem/DataItem";
 
 export default function DataInput({ props }) {
+    const handleClick = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <div className="data-input-bar">
             <form>
@@ -12,6 +16,7 @@ export default function DataInput({ props }) {
                 <DataItem itemName="Ice Cream" />
                 <DataItem itemName="French Fries" />
                 <DataItem itemName="Rice" />
+                <input type="submit" onclick={handleClick} />
             </form>
         </div>
     );

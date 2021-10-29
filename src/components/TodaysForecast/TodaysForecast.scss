@@ -1,6 +1,16 @@
+.divider {
+    h1 {
+        padding-top: 2rem;
+        text-align: center;
+        padding-left: 2rem;
+        font-size: 5rem;
+        font-weight: bold;
+        color: black;
+    }
+}
 .todays-forecast {
     margin-left: 200px;
-    height: 100vh;
+    height: calc(100vh - 10rem);
     display: flex;
 
     justify-content: center;

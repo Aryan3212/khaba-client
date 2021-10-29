@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Item({ item }) {
-    console.log("rendering");
     return (
         <div className="forecast-item">
             {item.map((elem) => (
