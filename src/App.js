@@ -5,6 +5,7 @@ import "./App.css";
 import Sidebar from "./components/Shared/Sidebar";
 import DataEntry from "./components/DataEntry/DataEntry";
 import TodaysForecast from "./components/TodaysForecast/TodaysForecast";
+import AdminPanel from "./components/AdminPanel/AdminPanel";
 
 function App() {
     return (
@@ -14,7 +15,7 @@ function App() {
                 <Switch>
                     <Route path="/forecast/">{<TodaysForecast />}</Route>
                     <Route path="/input-data/">{<DataEntry />}</Route>
-                    <Route path="/admin/">{<div>lgkhjgbkhj</div>}</Route>
+                    <Route path="/admin/">{<AdminPanel />}</Route>
                     <Route path="/">{<div>lgkhjgbkhj</div>}</Route>
                 </Switch>
             </Router>

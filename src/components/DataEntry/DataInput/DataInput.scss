@@ -4,4 +4,23 @@
     display: flex;
     justify-content: flex-end;
     color: black;
+    input[type="submit"] {
+        display: inline-block;
+        font-family: "Lato";
+        width: 400px;
+        margin-top: 2em;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding: 1em 0.6em;
+        margin-left: 1em;
+        background-color: #999ac6;
+        border: none;
+        transition: letter-spacing 0.2s ease-in;
+        &:hover {
+            letter-spacing: 0.05em;
+            background-color: #9192cc;
+        }
+    }
 }

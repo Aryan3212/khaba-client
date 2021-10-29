@@ -6,6 +6,33 @@
     position: fixed;
     height: 100vh;
     width: 200px;
+    .auth-button {
+        display: inline-block;
+        font-family: "Lato";
+        width: 50%;
+        margin-top: 2em;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding: 1em 0.6em;
+        margin-left: 1em;
+        background-color: #ef946c;
+        border: none;
+        transition: letter-spacing 0.2s ease-in;
+        &:hover {
+            letter-spacing: 0.05em;
+            background-color: #dd845d;
+        }
+    }
+    img {
+        width: 100%;
+        border-bottom: 2px solid white;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
     h1 {
         padding: 0.5em;
         font-size: 3rem;
@@ -21,7 +48,7 @@
             height: 1px;
             width: 0%;
             transition: width 0.3s ease-in;
-            border-bottom: 6px solid magenta;
+            border-bottom: 6px solid #999ac6;
         }
         &:hover {
             &::after {
@@ -49,7 +76,7 @@
                 height: 1px;
                 width: 0%;
                 transition: width 0.3s ease-in;
-                border-bottom: 6px solid magenta;
+                border-bottom: 6px solid #999ac6;
             }
             &:hover {
                 &::after {
