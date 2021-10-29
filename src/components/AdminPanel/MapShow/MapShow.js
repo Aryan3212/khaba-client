@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "./MapShow.scss";
 
+import RoutingMachine from "./RoutineMachine";
+
 import icon from "./assets/leaf-green.png";
 
 let DefaultIcon = L.icon({
@@ -35,11 +37,12 @@ export default function MapShow({ locationData }) {
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                {locationArray.map((i) => (
+                {/* {locationArray.map((i) => (
                     <Marker position={i[0]} icon={DefaultIcon}>
                         <Popup>{i[1]}</Popup>
                     </Marker>
-                ))}
+                ))} */}
+                <RoutingMachine locations={locationArray} />
             </MapContainer>
         </div>
     );
