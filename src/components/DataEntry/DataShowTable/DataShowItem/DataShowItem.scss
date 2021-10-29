@@ -1,15 +1,15 @@
 .data-show-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 1.5em;
+    margin: 1.5em 0;
     div {
-       
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 2em;
         //justify-content: space-around;
-        h5 {
-            font-size: 1.2rem;
-            padding: 0 0.5em;
-            text-transform: capitalize;
-        }
+    }
+    h5 {
+        margin-block: 1.5em;
+        font-size: 1.2rem;
+        padding: 0 0.5em;
+        text-transform: capitalize;
     }
 }
