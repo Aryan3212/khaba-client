@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "./MapShow.scss";
 
-import RoutingMachine from "./RoutineMachine";
+import RoutingMachine from "./RoutingMachine";
 
 import icon from "./assets/leaf-green.png";
 
