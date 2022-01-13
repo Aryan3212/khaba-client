@@ -68,7 +68,7 @@ export default function DataShowTable() {
     ];
 
     function callAPI(name) {
-        Axios.get("http://localhost:4200/getWaste", {
+        Axios.get("http://khaba.herokuapp.com/getWaste", {
             params: {
                 name: name,
             },

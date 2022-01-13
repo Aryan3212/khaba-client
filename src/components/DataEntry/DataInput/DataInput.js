@@ -16,7 +16,7 @@ export default function DataInput({ props }) {
     const [inputtedToggle, setToggle] = useState(1)
     function callAPI(produced, waste, item) {
         console.log(produced, waste, item)
-        Axios.post('http://localhost:4200/postItemEachDay',
+        Axios.post('http:///postItemEachDay',
             {
                 produced: produced,
                 wasted: waste,

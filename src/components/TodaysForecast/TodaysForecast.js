@@ -6,7 +6,7 @@ import "./TodaysForecast.scss";
 export default function TodaysForecast() {
     const [fetched, setFetched] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:4200/getUser")
+        fetch("http://khaba.herokuapp.com/getUser")
             .then((response) => response.json())
             .then((data) => {
                 console.log(2, typeof data);

@@ -7,7 +7,7 @@ export default function AdminPanel() {
     const [fetched, setFetched] = useState(null);
     // eslint-disable-next-line
     useEffect(() => {
-        fetch("http://localhost:4200/getUser")
+        fetch("http://khaba.herokuapp.com/getUser")
             .then((response) => response.json())
             .then((data) => {
                 console.log(2, typeof data);
