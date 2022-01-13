@@ -23,7 +23,11 @@ export default function AdminPanel() {
     return (
         <div className="admin-panel">
             <h1>Take this route to deliver</h1>
-            {fetched && <MapShow locationData={fetched} />}
+            {fetched ? (
+                <MapShow locationData={fetched} />
+            ) : (
+                <MapShow locationData={fetched} />
+            )}
         </div>
     );
 }

@@ -20,7 +20,12 @@ export default function TodaysForecast() {
                 console.log("fetched:", fetched);
             });
     }, []);
-
+    const dummyData = [
+        ["Rice", 11],
+        ["Water", 171],
+        ["Sauce", 20],
+        ["Granola", 90],
+    ];
     // const [counter, setcounter] = useState(1);
     return (
         <div className="divider">
@@ -29,7 +34,7 @@ export default function TodaysForecast() {
                 {/* {console.log(213213)}
                 {console.log(fetched)}
                 {fetched ? <Item /> : null} */}
-                {fetched && <Item item={fetched} />}
+                {fetched ? <Item item={fetched} /> : <Item item={dummyData} />}
             </div>
         </div>
     );

@@ -13,7 +13,7 @@ export default function DataInput({ props }) {
     const [friesW, setFriesW] = useState(0)
     const [riceB, setRiceB] = useState(0)
     const [riceW, setRiceW] = useState(0)
-
+    const [inputtedToggle, setToggle] = useState(1)
     function callAPI(produced, waste, item) {
         console.log(produced, waste, item)
         Axios.post('http://localhost:4200/postItemEachDay',
@@ -48,7 +48,7 @@ export default function DataInput({ props }) {
             setFriesW(0)
             setRiceB(0)
             setRiceW(0)
-            alert('Input was successfull')
+            alert('Input was successful')
         }
         else {
             alert('Please fill all the input')
