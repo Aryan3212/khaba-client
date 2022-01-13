@@ -16,6 +16,7 @@ let DefaultIcon = L.icon({
 
 export default function MapShow({ locationData }) {
     const [locations, setlocations] = useState(null);
+
     console.log(
         "mapDAta",
         locationData.data.map((elem) => elem.location)

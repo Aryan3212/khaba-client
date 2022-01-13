@@ -7,11 +7,9 @@ export default function AdminPanel() {
     const [fetched, setFetched] = useState(null);
     // eslint-disable-next-line
     useEffect(() => {
-        fetch("http://khaba.herokuapp.com/getUser")
+        fetch("https://khaba.herokuapp.com/getUser")
             .then((response) => response.json())
             .then((data) => {
-                console.log(2, typeof data);
-
                 setFetched(data);
             })
             .catch((e) => {
@@ -19,14 +17,16 @@ export default function AdminPanel() {
             })
             .finally(() => {});
     }, []);
-
+    console.log(fetched);
     return (
         <div className="admin-panel">
             <h1>Take this route to deliver</h1>
             {fetched ? (
                 <MapShow locationData={fetched} />
             ) : (
-                <MapShow locationData={fetched} />
+                <div style={{ textAlign: "center", color: "light-blue" }}>
+                    Map data is loading...
+                </div>
             )}
         </div>
     );
