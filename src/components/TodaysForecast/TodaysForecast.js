@@ -4,7 +4,7 @@ import Item from "./Item/Item";
 import "./TodaysForecast.scss";
 
 export default function TodaysForecast() {
-    const [fetched, setFetched] = useState(null);
+    const [fetched, setFetched] = useState([]);
     useEffect(() => {
         fetch("http://localhost:4200/getUser")
             .then((response) => response.json())
@@ -14,7 +14,7 @@ export default function TodaysForecast() {
                 setFetched(data.data[0].itemPrediction);
             })
             .catch((e) => {
-                console.log(e, "asdasd");
+                console.log(e);
             })
             .finally(() => {
                 console.log("fetched:", fetched);
