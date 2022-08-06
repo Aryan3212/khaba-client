@@ -13,10 +13,9 @@ function App() {
             <Router>
                 <Sidebar />
                 <Switch>
-                    <Route path="/forecast/">{<TodaysForecast />}</Route>
+                    <Route path="/">{<TodaysForecast />}</Route>
                     <Route path="/input-data/">{<DataEntry />}</Route>
                     <Route path="/admin/">{<AdminPanel />}</Route>
-                    <Route path="/">{<div>lgkhjgbkhj</div>}</Route>
                 </Switch>
             </Router>
         </div>
