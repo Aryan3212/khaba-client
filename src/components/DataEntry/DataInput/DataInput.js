@@ -13,7 +13,7 @@ export default function DataInput({ props }) {
     const [riceW, setRiceW] = useState(0);
     function callAPI(produced, waste, item) {
         console.log(produced, waste, item);
-        Axios.post("http://khaba.heroku.app/postItemEachDay", {
+        Axios.post("https://khaba.heroku.app/postItemEachDay", {
             produced: produced,
             wasted: waste,
             item: item,
