@@ -15,25 +15,18 @@ export default function TodaysForecast() {
             })
             .catch((e) => {
                 console.log(e);
-            })
-            .finally(() => {
-                console.log("fetched:", fetched);
             });
-    }, [fetched]);
+    }, []);
     const dummyData = [
         ["Rice", 11],
         ["Water", 171],
         ["Sauce", 20],
         ["Granola", 90],
     ];
-    // const [counter, setcounter] = useState(1);
     return (
         <div className="divider">
             <h1>Today's Prediction</h1>
             <div className="todays-forecast">
-                {/* {console.log(213213)}
-                {console.log(fetched)}
-                {fetched ? <Item /> : null} */}
                 {fetched ? <Item item={fetched} /> : <Item item={dummyData} />}
             </div>
         </div>

@@ -58,8 +58,8 @@ export default function DataInput({ props }) {
     }
 
     return (
-        <div className="data-input-bar">
-            <form onSubmit={handleSubmission}>
+        <div>
+            <form onSubmit={handleSubmission} className="data-input-bar">
                 <div className="data-item">
                     <h4>Burger</h4>
                     <div>

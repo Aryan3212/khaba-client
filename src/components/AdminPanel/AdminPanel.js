@@ -12,12 +12,9 @@ export default function AdminPanel() {
             .then((data) => {
                 setFetched(data);
             })
-            .catch((e) => {
-                console.log(e, "asdasd");
-            })
+            .catch((e) => {})
             .finally(() => {});
     }, []);
-    console.log(fetched);
     return (
         <div className="admin-panel">
             <h1>Take this route to deliver</h1>

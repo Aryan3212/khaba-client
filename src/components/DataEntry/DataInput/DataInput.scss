@@ -2,8 +2,31 @@
     margin-left: calc(2rem + 200px);
     padding-top: 4rem;
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
     color: black;
+    &:last-child {
+        flex: 999 0 100%;
+    }
+    & > * {
+        flex: 1 1 minmax(25%, 250px);
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    label {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    input[type="number"] {
+        width: 10rem;
+        margin-inline: 1rem;
+        text-align: center;
+    }
     input[type="submit"] {
         display: inline-block;
         font-family: "Lato";
@@ -11,10 +34,10 @@
         margin-top: 2em;
         color: white;
         font-weight: bolder;
+        text-align: center;
         font-size: 1.5rem;
         text-transform: uppercase;
         padding: 1em 0.6em;
-        margin-left: 1em;
         background-color: #999ac6;
         border: none;
         transition: letter-spacing 0.2s ease-in;
