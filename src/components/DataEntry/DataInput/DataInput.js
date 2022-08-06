@@ -13,7 +13,7 @@ export default function DataInput({ props }) {
     const [riceW, setRiceW] = useState(0);
     function callAPI(produced, waste, item) {
         console.log(produced, waste, item);
-        Axios.post("http:///postItemEachDay", {
+        Axios.post("http://khaba.heroku.app/postItemEachDay", {
             produced: produced,
             wasted: waste,
             item: item,
@@ -58,7 +58,7 @@ export default function DataInput({ props }) {
     }
 
     return (
-        <div>
+        <>
             <form onSubmit={handleSubmission} className="data-input-bar">
                 <div className="data-item">
                     <h4>Burger</h4>
@@ -142,6 +142,6 @@ export default function DataInput({ props }) {
                 </div>
                 <input type="submit" value="Submit" />
             </form>
-        </div>
+        </>
     );
 }
