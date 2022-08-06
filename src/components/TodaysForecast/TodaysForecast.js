@@ -19,7 +19,7 @@ export default function TodaysForecast() {
             .finally(() => {
                 console.log("fetched:", fetched);
             });
-    }, []);
+    }, [fetched]);
     const dummyData = [
         ["Rice", 11],
         ["Water", 171],

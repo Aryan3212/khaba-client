@@ -16,9 +16,6 @@ const createRoutineMachineLayer = ({ locations }) => {
         lineOptions: {
             styles: [{ color: "#6FA1EC", weight: 4 }],
         },
-        createMarker: function () {
-            return null;
-        },
         show: true,
         addWaypoints: false,
         routeWhileDragging: true,
